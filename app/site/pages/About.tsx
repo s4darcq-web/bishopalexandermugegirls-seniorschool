@@ -57,14 +57,21 @@ export default function About({ navigate }: Props) {
                 {school.about}
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                The school operates as a government-aided institution under the Ministry of Education,
-                Kenya, following the national curriculum leading to the Kenya Certificate of Secondary
-                Education (KCSE) at the end of Form Four.
+                Established in 1985, the school has served generations of learners through the former
+                8-4-4 secondary system. Kenya is now transitioning to Competency-Based Curriculum (CBC)
+                and Competency-Based Education (CBE). This is a phased change, not an overnight
+                replacement of every cohort.
+              </p>
+              <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
+                From 2026, Senior School is being implemented through Grades 10–12. The new Grade 10
+                intake progresses to Grade 11 and then Grade 12 as the transition continues. Current
+                Form 3 and Form 4 learners remain part of the outgoing 8-4-4 cohort; KCSE relates to
+                that outgoing pathway, not the new Senior School structure.
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                We serve students from across the region, providing a structured boarding environment,
-                quality academic instruction, and a wide range of co-curricular opportunities that
-                prepare graduates for higher education and productive life in Kenya and beyond.
+                Our traditions of rigorous learning, a structured boarding environment, and service
+                remain central as the school embraces a future-focused model that develops competencies,
+                talents, leadership, character, career awareness, and individual potential.
               </p>
             </div>
 
@@ -80,23 +87,26 @@ export default function About({ navigate }: Props) {
                     {school.namedAfter}
                   </p>
                   <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                    The school carries forward Bishop Muge&apos;s commitment to the people of the region
-                    by providing quality education that opens doors and builds futures for the young
-                    women entrusted to our care.
+                    The school carries forward Bishop Muge&apos;s legacy of education, principled
+                    leadership, justice, service, and community development. Those enduring values guide
+                    our mission as we enter the CBC Senior School era.
                   </p>
                 </div>
               </div>
 
               <div className="mt-10 p-6 rounded-xl bg-secondary border border-border">
                 <p className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">School Profile</p>
-                <dl className="grid grid-cols-2 gap-x-6 gap-y-4">
+                <dl className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
                   {[
                     { label: "Established", value: school.established },
+                    { label: "Current Identity", value: school.name },
                     { label: "Type", value: school.type },
                     { label: "Category", value: school.category },
-                    { label: "Certificate", value: "KCSE" },
+                    { label: "Transition", value: school.transition },
+                    { label: "Structure", value: school.levels.join(" · ") },
+                    { label: "Curriculum", value: school.curriculum },
+                    { label: "Outgoing Cohort", value: "8-4-4 Forms 3–4; KCSE" },
                     { label: "Location", value: `${school.location.region}, Kenya` },
-                    { label: "Examining Body", value: "KNEC" },
                   ].map(({ label, value }) => (
                     <div key={label}>
                       <dt className="font-sans text-xs text-muted-foreground mb-0.5">{label}</dt>

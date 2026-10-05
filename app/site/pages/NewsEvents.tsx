@@ -1,8 +1,10 @@
 import { news, events } from "../data/content"
 import type { NavigateFn } from "../types"
+import SchoolGallery from "../components/SchoolGallery"
 
 interface Props {
   navigate: NavigateFn
+  targetSection?: string
 }
 
 function SectionLabel({ number, label }: { number: string; label: string }) {
@@ -16,7 +18,7 @@ function SectionLabel({ number, label }: { number: string; label: string }) {
   )
 }
 
-export default function NewsEvents({ navigate }: Props) {
+export default function NewsEvents({ navigate, targetSection }: Props) {
   return (
     <div id="main-content">
       {/* Page hero */}
@@ -49,9 +51,9 @@ export default function NewsEvents({ navigate }: Props) {
             </svg>
           </div>
           <div>
-            <span className="font-sans text-sm font-semibold text-accent">Admissions Open: </span>
+            <span className="font-sans text-sm font-semibold text-accent">Senior School transition: </span>
             <span className="font-sans text-sm text-muted-foreground">
-              Form One applications for the 2025/2026 academic year are now being received.{" "}
+              Grade 10 marks the entry point to the CBC Senior School pathway from 2026. Contact the school for current placement information.{" "}
               <button onClick={() => navigate("admissions")} className="text-accent font-semibold hover:underline focus:outline-none focus-visible:underline">
                 Learn more →
               </button>
@@ -61,7 +63,7 @@ export default function NewsEvents({ navigate }: Props) {
       </div>
 
       {/* News */}
-      <section className="bg-background py-20 lg:py-28">
+      <section id="latest-news" className="scroll-mt-20 bg-background py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionLabel number="01" label="School News" />
           <div className="flex items-center justify-between mb-12">
@@ -118,7 +120,7 @@ export default function NewsEvents({ navigate }: Props) {
       </section>
 
       {/* Events */}
-      <section className="bg-card py-20 lg:py-28 border-y border-border">
+      <section id="upcoming-events" className="scroll-mt-20 bg-card py-20 lg:py-28 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionLabel number="02" label="School Calendar" />
           <div className="grid lg:grid-cols-2 gap-12 items-end mb-12">
@@ -175,6 +177,8 @@ export default function NewsEvents({ navigate }: Props) {
           )}
         </div>
       </section>
+
+      <SchoolGallery key={targetSection ?? "default"} targetSection={targetSection} />
 
       {/* Contact for updates */}
       <section className="bg-muted py-16">

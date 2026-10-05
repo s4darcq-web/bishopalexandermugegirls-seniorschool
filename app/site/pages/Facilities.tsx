@@ -52,13 +52,13 @@ export default function Facilities({ navigate }: Props) {
                 Environment Shapes Learning
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                At Bishop Alexander Muge Girls Secondary School, we believe the physical environment
+                At Bishop Alexander Muge Girls Senior School, we believe the physical environment
                 has a direct impact on how students learn, how they feel, and how they grow.
                 Our campus facilities are maintained to support both academic rigour and student wellbeing.
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
                 We continually work to improve our facilities in line with the needs of our students
-                and the standards expected of a quality Kenyan secondary school.
+                and the standards expected of a quality Kenyan Senior School.
               </p>
               <p className="font-sans text-sm text-muted-foreground italic">
                 Note: Facility listings reflect confirmed information. Official school confirmation

@@ -25,7 +25,7 @@ export default function Footer({ navigate }: FooterProps) {
               />
               <div>
                 <div className="font-serif font-semibold text-sm text-white leading-tight">Bishop Alexander Muge</div>
-                <div className="text-xs text-white/50 font-sans">Girls Secondary School</div>
+                <div className="text-xs text-white/50 font-sans">Girls Senior School</div>
               </div>
             </div>
             <p className="font-sans text-sm text-white/60 leading-relaxed mb-6">
@@ -123,7 +123,7 @@ export default function Footer({ navigate }: FooterProps) {
         {/* Bottom bar */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-sans text-xs text-white/40">
-            &copy; {year} Bishop Alexander Muge Girls Secondary School. All rights reserved.
+            &copy; {year} Bishop Alexander Muge Girls Senior School. All rights reserved.
           </p>
           <div className="flex items-center gap-6 flex-wrap justify-end">
             <button className="font-sans text-xs text-white/40 hover:text-white/60 transition-colors focus:outline-none focus-visible:underline">

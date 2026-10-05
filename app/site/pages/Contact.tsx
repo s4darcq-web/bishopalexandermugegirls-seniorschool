@@ -70,7 +70,7 @@ export default function Contact({ navigate }: Props) {
             </h1>
             <p className="font-sans text-lg text-white/65 leading-relaxed">
               Reach out to our administration office for enquiries about admissions, school life,
-              or any other information about Bishop Alexander Muge Girls Secondary School.
+              or any other information about Bishop Alexander Muge Girls Senior School.
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function Contact({ navigate }: Props) {
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-8">Find Us</h2>
           <div className="aspect-video max-h-96 rounded-xl overflow-hidden bg-muted border border-border">
             <iframe
-              title="Bishop Alexander Muge Girls Secondary School location"
+              title="Bishop Alexander Muge Girls Senior School location"
               src={school.location.mapsUrl ?? "https://www.google.com/maps?q=Trans-Nzoia%20Kenya&output=embed"}
               className="w-full h-full border-0"
               loading="lazy"

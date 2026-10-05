@@ -34,7 +34,7 @@ export default function Academics({ navigate }: Props) {
             </h1>
             <p className="font-sans text-lg text-white/65 leading-relaxed">
               Our curriculum, departments, and academic support services are built around one goal:
-              preparing every student to succeed in KCSE and beyond.
+              developing competencies, talents, and career awareness for Senior School and beyond.
             </p>
           </div>
         </div>
@@ -48,45 +48,41 @@ export default function Academics({ navigate }: Props) {
             <div>
               <SectionLabel number="01" label="Curriculum" />
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                The Kenyan National Curriculum
+                CBC Senior School: Grades 10–12
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                Bishop Alexander Muge Girls Secondary School follows the Kenya national secondary
-                school curriculum as prescribed by the Kenya Institute of Curriculum Development
-                (KICD), leading to the Kenya Certificate of Secondary Education (KCSE) at Form Four.
+                Bishop Alexander Muge Girls Senior School is transitioning to the Competency-Based
+                Curriculum (CBC) and Competency-Based Education (CBE). Senior School is structured
+                across Grades 10, 11, and 12, with learning focused on applying knowledge, developing
+                competencies, nurturing talents, and supporting career pathways.
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                Students progress through Form 1 to Form 4, studying a broad range of compulsory
-                and elective subjects across sciences, humanities, languages, and applied disciplines.
-                The KCSE examination is administered by the Kenya National Examinations Council (KNEC).
+                The transition is phased. The new Grade 10 intake enters Senior School from 2026 and
+                progresses to Grade 11 and then Grade 12 as cohorts advance. Current Form 3 and Form 4
+                learners belong to the outgoing 8-4-4 cohort and continue toward KCSE under that system.
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                Beyond examination preparation, our teaching approach emphasises comprehension,
-                critical reasoning, and the ability to apply knowledge — skills that serve students
-                throughout higher education and professional life.
+                Subject departments, co-curricular learning, and student guidance support learners
+                through both the current transition and their next steps in education and work.
               </p>
             </div>
 
             <div className="space-y-5">
               <h3 className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mb-6">
-                Programme Structure
+                Senior School Progression
               </h3>
               {[
                 {
-                  form: "Form 1",
-                  description: "Foundation year. Students are introduced to secondary school subjects, routines, and expectations. Focus on building strong fundamentals across all subject areas.",
+                  form: "Grade 10",
+                  description: "Senior School entry from 2026. Learners begin the CBC pathway, exploring their strengths, interests, and learning pathways.",
                 },
                 {
-                  form: "Form 2",
-                  description: "Consolidation year. Students deepen subject knowledge and begin making more focused choices about elective combinations.",
+                  form: "Grade 11",
+                  description: "Learners continue building competencies and subject knowledge, with growing focus on their strengths and future pathways.",
                 },
                 {
-                  form: "Form 3",
-                  description: "Preparation year. Intensive engagement with the full KCSE syllabus. Internal assessments and mock examinations guide academic progress.",
-                },
-                {
-                  form: "Form 4",
-                  description: "Examination year. Final revision, mock examinations, and sitting of the Kenya Certificate of Secondary Education (KCSE).",
+                  form: "Grade 12",
+                  description: "Learners complete the Senior School phase and prepare for their next education, training, or career steps.",
                 },
               ].map((item) => (
                 <div key={item.form} className="flex gap-5 p-5 rounded-lg border border-border bg-card hover:border-primary/20 transition-colors">
@@ -99,6 +95,13 @@ export default function Academics({ navigate }: Props) {
                   </div>
                 </div>
               ))}
+              <div className="rounded-lg border border-accent/20 bg-accent/5 p-5">
+                <h4 className="font-sans font-semibold text-foreground mb-2">The outgoing 8-4-4 cohort</h4>
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed">
+                  Current Form 3 and Form 4 learners continue under the former system, with KCSE
+                  applying to that cohort. Form Four is not part of the new Grade 10–12 Senior School structure.
+                </p>
+              </div>
             </div>
           </div>
         </div>

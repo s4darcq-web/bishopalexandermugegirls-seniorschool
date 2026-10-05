@@ -41,7 +41,28 @@ const navItems = [
     ],
   },
   { label: "Facilities", page: "facilities" as Page },
-  { label: "News & Events", page: "news-events" as Page },
+  {
+    label: "News & Events",
+    page: "news-events" as Page,
+    children: [
+      { label: "Latest News", page: "news-events" as Page, section: "latest-news" },
+      { label: "Upcoming Events", page: "news-events" as Page, section: "upcoming-events" },
+      {
+        label: "School Gallery",
+        page: "news-events" as Page,
+        section: "school-gallery",
+        children: [
+          { label: "Academics", page: "news-events" as Page, section: "gallery-category-academics" },
+          { label: "Sports", page: "news-events" as Page, section: "gallery-category-sports" },
+          { label: "Clubs & Societies", page: "news-events" as Page, section: "gallery-category-clubs-societies" },
+          { label: "Student Life", page: "news-events" as Page, section: "gallery-category-student-life" },
+          { label: "Leadership", page: "news-events" as Page, section: "gallery-category-leadership" },
+          { label: "Events & Celebrations", page: "news-events" as Page, section: "gallery-category-events-celebrations" },
+          { label: "Campus & Facilities", page: "news-events" as Page, section: "gallery-category-campus-facilities" },
+        ],
+      },
+    ],
+  },
   { label: "Contact", page: "contact" as Page },
 ]
 
@@ -104,7 +125,7 @@ export default function Header({ currentPage, navigate }: HeaderProps) {
             <button
               onClick={() => go("home")}
               className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
-              aria-label="Bishop Alexander Muge Girls Secondary School — Home"
+              aria-label="Bishop Alexander Muge Girls Senior School — Home"
             >
               <Image
                 src={logo}
@@ -126,13 +147,13 @@ export default function Header({ currentPage, navigate }: HeaderProps) {
                     solid ? "text-muted-foreground" : "text-white/70",
                   ].join(" ")}
                 >
-                  Girls Secondary School
+                  Girls Senior School
                 </div>
               </div>
             </button>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+            <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
               {navItems.map((item) =>
                 item.children ? (
                   <div
@@ -172,18 +193,32 @@ export default function Header({ currentPage, navigate }: HeaderProps) {
                     </button>
                     {openDropdown === item.label && (
                       <div
-                        className="absolute top-full left-0 mt-1 w-52 bg-white border border-border rounded-lg shadow-lg py-1 z-50"
+                        className="absolute top-full left-0 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg py-1 z-50"
                         onMouseEnter={() => handleMouseEnter(item.label)}
                         onMouseLeave={handleMouseLeave}
                       >
                         {item.children.map((child) => (
-                          <button
-                            key={child.label}
-                            onClick={() => go(child.page, child.section)}
-                            className="w-full text-left px-4 py-2.5 text-sm font-sans text-foreground hover:bg-secondary hover:text-primary transition-colors"
-                          >
-                            {child.label}
-                          </button>
+                          <div key={child.label}>
+                            <button
+                              onClick={() => go(child.page, child.section)}
+                              className="w-full text-left px-4 py-2.5 text-sm font-sans text-foreground hover:bg-secondary hover:text-primary transition-colors"
+                            >
+                              {child.label}
+                            </button>
+                            {"children" in child && child.children && (
+                              <div className="ml-4 mb-1 border-l border-border pl-2">
+                                {child.children.map((nestedChild) => (
+                                  <button
+                                    key={nestedChild.label}
+                                    onClick={() => go(nestedChild.page, nestedChild.section)}
+                                    className="w-full text-left px-3 py-2 text-xs font-sans text-muted-foreground hover:bg-secondary hover:text-primary transition-colors"
+                                  >
+                                    {nestedChild.label}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         ))}
                       </div>
                     )}
@@ -218,7 +253,7 @@ export default function Header({ currentPage, navigate }: HeaderProps) {
             {/* Mobile hamburger */}
             <button
               className={[
-                "lg:hidden p-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                "xl:hidden p-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 solid ? "text-foreground" : "text-white",
               ].join(" ")}
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -239,13 +274,13 @@ export default function Header({ currentPage, navigate }: HeaderProps) {
 
       {/* Mobile menu overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-primary flex flex-col lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div className="fixed inset-0 z-40 bg-primary flex flex-col xl:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
           <div className="flex items-center justify-between h-16 px-4 border-b border-white/10">
             <div className="flex items-center gap-3">
               <Image src={logo} alt="" className="w-18 h-18 rounded-full object-contain bg-white flex-shrink-0" />
               <div>
                 <div className="font-serif text-sm font-semibold text-white leading-tight">Bishop Alexander Muge</div>
-                <div className="text-xs text-white/60 font-sans">Girls Secondary School</div>
+                <div className="text-xs text-white/60 font-sans">Girls Senior School</div>
               </div>
             </div>
             <button
@@ -270,13 +305,27 @@ export default function Header({ currentPage, navigate }: HeaderProps) {
                 {item.children && (
                   <div className="ml-4 mt-1 space-y-0.5 border-l border-white/20 pl-4">
                     {item.children.map((child) => (
-                      <button
-                        key={child.label}
-                        onClick={() => go(child.page, child.section)}
-                        className="w-full text-left px-3 py-2.5 rounded text-white/70 font-sans text-sm hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                      >
-                        {child.label}
-                      </button>
+                      <div key={child.label}>
+                        <button
+                          onClick={() => go(child.page, child.section)}
+                          className="w-full text-left px-3 py-2.5 rounded text-white/70 font-sans text-sm hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                        >
+                          {child.label}
+                        </button>
+                        {"children" in child && child.children && (
+                          <div className="ml-3 border-l border-white/20 pl-2">
+                            {child.children.map((nestedChild) => (
+                              <button
+                                key={nestedChild.label}
+                                onClick={() => go(nestedChild.page, nestedChild.section)}
+                                className="w-full text-left px-3 py-2 rounded text-white/50 font-sans text-xs hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                              >
+                                {nestedChild.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}

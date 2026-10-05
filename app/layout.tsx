@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bishop Alexander Muge Girls Secondary School",
-  description: "Bishop Alexander Muge Girls Secondary School in Kenya: academics, admissions, student life, facilities, news, and contact information.",
+  title: "Bishop Alexander Muge Girls Senior School",
+  description: "Bishop Alexander Muge Girls Senior School in Kenya: CBC Senior School academics, Grade 10 admissions, student life, facilities, news, and contact information.",
   keywords: [
-    "Bishop Alexander Muge Girls Secondary School",
-    "BAM Girls Secondary School",
+    "Bishop Alexander Muge Girls Senior School",
+    "BAM Girls Senior School",
     "girls boarding school Kenya",
-    "secondary school admissions Kenya",
-    "KCSE school Eldoret Diocese",
+    "CBC Senior School admissions Kenya",
+    "Grade 10 admissions Kenya",
   ],
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   alternates: { canonical: "/" },
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
   },
   openGraph: {
-    title: "Bishop Alexander Muge Girls Secondary School",
-    description: "Cultivating leaders. Shaping futures.",
+    title: "Bishop Alexander Muge Girls Senior School",
+    description: "Established in 1985, the school is transitioning from the 8-4-4 secondary system to CBC Senior School, Grades 10–12.",
     type: "website",
     locale: "en_KE",
   },

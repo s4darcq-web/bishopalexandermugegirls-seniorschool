@@ -68,7 +68,7 @@ export default function StudentLife({ navigate }: Props) {
                 Confident, Capable, Connected
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                At Bishop Alexander Muge Girls Secondary School, we believe education is complete
+                At Bishop Alexander Muge Girls Senior School, we believe education is complete
                 only when it extends beyond academic instruction. Our school life programme is designed
                 to develop the whole person — intellectually, physically, socially, and spiritually.
               </p>
@@ -135,7 +135,7 @@ export default function StudentLife({ navigate }: Props) {
                 Athletics, Teamwork, and Competitive Spirit
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                Sport is an integral part of life at Bishop Alexander Muge Girls Secondary School.
+                Sport is an integral part of life at Bishop Alexander Muge Girls Senior School.
                 Physical education and competitive sport teach discipline, teamwork, perseverance,
                 and the grace of winning and losing that classroom lessons alone cannot provide.
               </p>
@@ -202,8 +202,8 @@ export default function StudentLife({ navigate }: Props) {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { title: "School Captain", description: "Elected by Form Four students to represent the entire student body." },
-                { title: "Student Council", description: "Representatives from each form who raise student concerns with staff." },
+                { title: "School Captain", description: "Elected by students to represent the entire student body." },
+                { title: "Student Council", description: "Student representatives who raise learner concerns with staff." },
                 { title: "House Prefects", description: "Leaders responsible for inter-house activities and house discipline." },
                 { title: "Club Leaders", description: "Presidents and secretaries of each club and activity group." },
               ].map((role) => (

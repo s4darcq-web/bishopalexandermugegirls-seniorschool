@@ -24,18 +24,10 @@ export default function Home({ navigate }: Props) {
       {/* ── Hero ────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col lg:flex-row" aria-label="Hero">
         {/* Left: Green identity panel */}
-        <div className="relative z-10 flex flex-col justify-center lg:w-[45%] bg-primary px-8 sm:px-12 lg:px-16 xl:px-20 py-24 lg:py-0 min-h-[50vh] lg:min-h-screen">
-          {/* Monogram */}
-          <div className="mb-8 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center">
-              <span className="font-serif font-bold text-white text-base tracking-wide">BAM</span>
-            </div>
-            <div className="h-px flex-1 bg-white/20 max-w-[80px]" />
-          </div>
-
+        <div className="relative z-10 flex flex-col justify-center lg:w-[45%] bg-primary px-8 sm:px-12 lg:px-16 xl:px-20 py-24 lg:pt-18 lg:pb-0 min-h-[50vh] lg:min-h-screen">
           {/* School name */}
           <p className="font-sans text-xs tracking-[0.22em] uppercase text-white/50 mb-6">
-            Bishop Alexander Muge Girls Secondary School
+            Bishop Alexander Muge Girls Senior School
           </p>
 
           {/* Headline */}
@@ -49,8 +41,8 @@ export default function Home({ navigate }: Props) {
 
           {/* Description */}
           <p className="font-sans text-base lg:text-lg text-white/65 leading-relaxed max-w-md mb-10">
-            A distinguished girls&apos; secondary school in Kenya committed to academic excellence,
-            principled character, and the full development of every young woman.
+            A girls&apos; boarding school in Kenya nurturing academic excellence, practical
+            competencies, principled character, and the full potential of every young woman.
           </p>
 
           {/* CTAs */}
@@ -82,7 +74,7 @@ export default function Home({ navigate }: Props) {
         <div className="relative lg:w-[55%] h-64 sm:h-80 lg:h-auto lg:min-h-screen bg-primary/80 overflow-hidden">
           <Image
             src="/images/studenthero.jpg"
-            alt="Teacher leading a classroom session at Bishop Alexander Muge Girls Secondary School"
+            alt="Teacher leading a classroom session at Bishop Alexander Muge Girls Senior School"
             fill
             priority
             sizes="(max-width: 1023px) 100vw, 75vw"
@@ -159,8 +151,8 @@ export default function Home({ navigate }: Props) {
             </div>
             <div>
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
-                Our academic programme follows the Kenyan national curriculum through to KCSE, supported
-                by strong subject departments, co-curricular learning, and dedicated student guidance.
+                Our CBC Senior School programme for Grades 10–12 develops competencies, talents, and
+                career awareness, supported by strong subject departments and dedicated student guidance.
               </p>
             </div>
           </div>
@@ -169,8 +161,8 @@ export default function Home({ navigate }: Props) {
             {[
               {
                 num: "—",
-                title: "KCSE Curriculum",
-                body: "Full coverage of the Kenya Certificate of Secondary Education curriculum across sciences, humanities, languages, and applied subjects from Form 1 through Form 4.",
+                title: "CBC Senior School",
+                body: "A competency-based Grades 10–12 pathway that builds knowledge, practical skills, talents, and career awareness.",
                 cta: "View Curriculum",
               },
               {
@@ -282,12 +274,12 @@ export default function Home({ navigate }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
-              <p className="font-sans text-xs tracking-[0.22em] uppercase text-white/70 mb-2">2025/2026 Academic Year</p>
+              <p className="font-sans text-xs tracking-[0.22em] uppercase text-white/70 mb-2">CBC Senior School · 2026 Transition</p>
               <h2 className="font-serif text-2xl lg:text-3xl font-semibold text-white">
-                Admissions Now Open
+                Grade 10 Senior School Admissions
               </h2>
               <p className="font-sans text-base text-white/75 mt-2">
-                Begin your daughter&apos;s journey at Bishop Alexander Muge Girls Secondary School.
+                Contact the school for current Grade 10 placement guidance and admissions information.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">

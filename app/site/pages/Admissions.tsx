@@ -34,7 +34,8 @@ export default function Admissions({ navigate }: Props) {
                 Join Our School Community
               </h1>
               <p className="font-sans text-lg text-white/65 leading-relaxed">
-                For admissions of Grade 10 or student transfer, contact or visit the school for more information.
+                Grade 10 is the entry point to CBC Senior School. Contact the school for current
+                placement guidance and transfer information during the transition.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
@@ -62,11 +63,13 @@ export default function Admissions({ navigate }: Props) {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                Grade 10 and Student Transfer
+                Grade 10 Senior School Entry and Student Transfer
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-8">
-                For admissions of Grade 10 or student transfer, contact the school office or visit the
-                school for more information about the process and current availability.
+                Senior School is being introduced through Grades 10–12 from 2026. Grade 10 learners
+                progress to Grade 11 and then Grade 12 as the transition continues. For current Grade
+                10 placement guidance, transfer information, requirements, and availability, contact
+                the school office directly.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a

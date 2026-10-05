@@ -41,7 +41,7 @@ export default function App() {
       case "admissions": return <Admissions navigate={navigate} />
       case "student-life": return <StudentLife navigate={navigate} />
       case "facilities": return <Facilities navigate={navigate} />
-      case "news-events": return <NewsEvents navigate={navigate} />
+      case "news-events": return <NewsEvents navigate={navigate} targetSection={targetSection} />
       case "contact": return <Contact navigate={navigate} />
     }
   }

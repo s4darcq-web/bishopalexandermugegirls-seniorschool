@@ -1,14 +1,14 @@
 // Content marked [PLACEHOLDER] requires official school information before publishing.
 
 export const school = {
-  name: "Bishop Alexander Muge Girls Secondary School",
+  name: "Bishop Alexander Muge Girls Senior School",
   shortName: "BAM Girls",
   motto: "Truth and excellence",
   tagline: "Cultivating Leaders. Shaping Futures.",
   about:
-    "Bishop Alexander Muge Girls Secondary School is a government-aided girls boarding school committed to the academic and personal development of young women in Kenya. Named in honour of the late Rt. Rev. Alexander Kipsang Muge, Bishop of Eldoret Diocese, the school upholds a tradition of rigorous scholarship, discipline, and service to community.",
+    "Established in 1985, Bishop Alexander Muge Girls Senior School is a government-aided girls' boarding school in Kenya. Named in honour of the late Rt. Rev. Alexander Kipsang Muge, Bishop of Eldoret Diocese, the school continues its tradition of scholarship, discipline, leadership, and service as it transitions from the 8-4-4 secondary model to CBC Senior School.",
   namedAfter:
-    "The school is named after the Rt. Rev. Alexander Kipsang Muge, the Anglican Bishop of Eldoret Diocese. Bishop Muge was a respected spiritual leader and community advocate who championed education, justice, and development in the Rift Valley region until his passing in 1990. His legacy of principled leadership and dedication to others continues to inspire the school's values and culture.",
+    "The school is named after the Rt. Rev. Alexander Kipsang Muge, the Anglican Bishop of Eldoret Diocese. Bishop Muge was a respected spiritual leader and community advocate who championed education, justice, and development in the Rift Valley region until his passing in 1990. His legacy of principled leadership, service, and dedication to community continues to inspire the school's values and its Senior School era.",
   location: {
     address: "Trans-Nzoia, Kenya",
     county: "Trans-Nzoia",
@@ -24,11 +24,16 @@ export const school = {
     postalAddress: "[PLACEHOLDER: P.O. Box, Town]",
   },
   established: "1985",
-  type: "Girls Secondary School",
+  type: "Girls' Boarding School",
   category: "Government-Aided",
-  levels: ["Form 1", "Form 2", "Form 3", "Form 4"],
+  transition: "8-4-4 Secondary → CBC Senior School",
+  curriculum: "Competency-Based Curriculum (CBC) / Competency-Based Education (CBE)",
+  levels: ["Grade 10", "Grade 11", "Grade 12"],
+  outgoingCohort: "Current Form 3 and Form 4 learners continue under the outgoing 8-4-4 cohort.",
+  transitionProgression:
+    "From 2026, the new Grade 10 intake enters Senior School and progresses to Grade 11 and then Grade 12 as the transition continues.",
   examBody: "Kenya National Examinations Council (KNEC)",
-  certificate: "Kenya Certificate of Secondary Education (KCSE)",
+  outgoingCertificate: "Kenya Certificate of Secondary Education (KCSE)",
 }
 
 export const values = [
@@ -295,12 +300,12 @@ export const sports = [
 export const news = [
   {
     id: 1,
-    title: "Grade 10 Admission — 2025/2026 Academic Year",
+    title: "Grade 10 Senior School Admission — 2026",
     date: "2025-02-01",
     category: "Admissions",
     summary:
-      "The school welcomes applications for Grade 10 entry for the 2025/2026 academic year. Prospective students and parents are encouraged to contact the admissions office for guidance on the process and requirements.",
-    slug: "grade-10-admission-2025",
+      "As the CBC Senior School transition begins, prospective Grade 10 learners and families should contact the school for current placement guidance, requirements, and availability.",
+    slug: "grade-10-senior-school-admission-2026",
     image: "/images/admissions.jpg",
   },
 ]
@@ -317,21 +322,128 @@ export const events = [
   },
 ]
 
-export const admissionFAQs = [
+export const galleryCategories = [
+  "Academics",
+  "Sports",
+  "Clubs & Societies",
+  "Student Life",
+  "Leadership",
+  "Events & Celebrations",
+  "Campus & Facilities",
+] as const
+
+export type GalleryCategory = (typeof galleryCategories)[number]
+
+export interface GalleryItem {
+  id: string
+  title: string
+  description: string
+  category: GalleryCategory
+  image: string
+  alt: string
+  date?: string
+  published: boolean
+}
+
+export const galleryItems: GalleryItem[] = [
   {
-    question: "Who is eligible to apply for Form One?",
-    answer:
-      "Girls who have completed primary school and sat the Kenya Certificate of Primary Education (KCPE) examinations are eligible. The school follows Ministry of Education placement guidelines for government-aided secondary schools.",
+    id: "learning-spaces",
+    title: "Spaces for learning",
+    description: "Purposeful academic spaces support curiosity, focus, and a love of learning.",
+    category: "Academics",
+    image: "/images/academicspaces.jpg",
+    alt: "Academic spaces at Bishop Alexander Muge Girls Senior School",
+    published: true,
   },
   {
-    question: "How does the Form One selection process work?",
+    id: "classroom-learning",
+    title: "Learning in action",
+    description: "Every lesson is an opportunity to ask questions, share ideas, and grow.",
+    category: "Academics",
+    image: "/images/classes.png",
+    alt: "Classroom learning at Bishop Alexander Muge Girls Senior School",
+    published: true,
+  },
+  {
+    id: "school-sports",
+    title: "Growing through sport",
+    description: "Sport builds teamwork, confidence, and resilience beyond the classroom.",
+    category: "Sports",
+    image: "/images/sportsground.png",
+    alt: "Sports grounds at Bishop Alexander Muge Girls Senior School",
+    published: true,
+  },
+  {
+    id: "student-life",
+    title: "A community that learns together",
+    description: "Shared experiences and friendships make school life memorable.",
+    category: "Student Life",
+    image: "/images/studentfocus.jpg",
+    alt: "Students learning together at Bishop Alexander Muge Girls Senior School",
+    published: true,
+  },
+  {
+    id: "clubs-and-societies",
+    title: "Finding a place to belong",
+    description: "Clubs and societies give students room to explore their interests and talents.",
+    category: "Clubs & Societies",
+    image: "/images/herostudent.jpg",
+    alt: "Students taking part in school activities",
+    published: true,
+  },
+  {
+    id: "school-leadership",
+    title: "Learning to lead",
+    description: "Students are encouraged to lead with integrity, purpose, and care for others.",
+    category: "Leadership",
+    image: "/images/administration.png",
+    alt: "School administration facilities",
+    published: true,
+  },
+  {
+    id: "school-celebrations",
+    title: "Celebrating every milestone",
+    description: "School events bring students, staff, families, and community together.",
+    category: "Events & Celebrations",
+    image: "/images/admissions.jpg",
+    alt: "A school community event",
+    published: true,
+  },
+  {
+    id: "campus-and-facilities",
+    title: "A campus for growth",
+    description: "School facilities provide a supportive setting for learning and daily life.",
+    category: "Campus & Facilities",
+    image: "/images/administrativeblock.png",
+    alt: "Campus facilities at Bishop Alexander Muge Girls Senior School",
+    published: true,
+  },
+  {
+    id: "boarding-community",
+    title: "A place to call home",
+    description: "Boarding life builds independence, friendship, and a strong sense of community.",
+    category: "Campus & Facilities",
+    image: "/images/dormitorieswelfare.jpg",
+    alt: "Boarding facilities at Bishop Alexander Muge Girls Senior School",
+    published: true,
+  },
+]
+
+export const admissionFAQs = [
+  {
+    question: "What was the former 8-4-4 Form One entry route?",
     answer:
-      "Form One selection for government-aided schools is coordinated through the Ministry of Education's national placement system. Parents and students should consult the school's admissions office for guidance specific to their situation.",
+      "Form One admissions refer to the school's historical 8-4-4 entry route. For the current Senior School intake, Grade 10 placement is handled under Ministry of Education guidance. Please contact the school office for current eligibility and placement information.",
+  },
+  {
+    question: "How does Grade 10 Senior School placement work?",
+    answer:
+      "Grade 10 entry is part of the CBC Senior School transition. Parents and learners should consult the Ministry of Education placement guidance and contact the school office for current admission steps.",
   },
   {
     question: "What documents are required upon admission?",
     answer:
-      "[PLACEHOLDER: The school will provide a complete list of required documents at time of admission. Typical documents include: KCPE result slip, birth certificate, transfer letter where applicable, medical report, and completed school registration forms.]",
+      "[PLACEHOLDER: The school will provide a complete list of documents required for Grade 10 Senior School entry and transfers.]",
   },
   {
     question: "Is the school a full boarding school?",
