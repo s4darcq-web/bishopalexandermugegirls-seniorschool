@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {
   defaultKeywords,
   defaultOgImage,
-  siteDescription,
   siteName,
   siteUrl,
 } from "./seo";
@@ -11,7 +10,6 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: siteName,
-  description: siteDescription,
   keywords: defaultKeywords,
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
@@ -20,12 +18,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: siteName,
-    description: siteDescription,
     type: "website",
     locale: "en_KE",
     siteName,
     url: siteUrl,
     images: [{ url: defaultOgImage }],
+  },
+  twitter: {
+    card: "summary",
+    title: siteName,
+    images: [defaultOgImage],
   },
   robots: { index: true, follow: true },
 };
