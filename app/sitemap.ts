@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next"
+import { siteUrl } from "./seo"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   const lastModified = new Date()
 
   return [
     {
-      url: baseUrl,
+      url: siteUrl,
       lastModified,
       changeFrequency: "monthly",
       priority: 1,

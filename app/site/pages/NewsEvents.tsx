@@ -51,9 +51,9 @@ export default function NewsEvents({ navigate, targetSection }: Props) {
             </svg>
           </div>
           <div>
-            <span className="font-sans text-sm font-semibold text-accent">Senior School transition: </span>
+            <span className="font-sans text-sm font-semibold text-accent">Phased Senior School transition: </span>
             <span className="font-sans text-sm text-muted-foreground">
-              Grade 10 marks the entry point to the CBC Senior School pathway from 2026. Contact the school for current placement information.{" "}
+              The new Grade 10 intake enters the CBC pathway while current Forms 3 and 4 complete the outgoing 8-4-4 cohort and KCSE. Contact the school for placement information.{" "}
               <button onClick={() => navigate("admissions")} className="text-accent font-semibold hover:underline focus:outline-none focus-visible:underline">
                 Learn more →
               </button>

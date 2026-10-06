@@ -52,9 +52,9 @@ export default function Academics({ navigate }: Props) {
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
                 Bishop Alexander Muge Girls Senior School is transitioning to the Competency-Based
-                Curriculum (CBC) and Competency-Based Education (CBE). Senior School is structured
-                across Grades 10, 11, and 12, with learning focused on applying knowledge, developing
-                competencies, nurturing talents, and supporting career pathways.
+                Curriculum (CBC) and Competency-Based Education (CBE). The new Senior School pathway
+                is being introduced through Grades 10, 11, and 12, with learning focused on applying
+                knowledge, developing competencies, nurturing talents, and supporting career pathways.
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
                 The transition is phased. The new Grade 10 intake enters Senior School from 2026 and
@@ -78,11 +78,11 @@ export default function Academics({ navigate }: Props) {
                 },
                 {
                   form: "Grade 11",
-                  description: "Learners continue building competencies and subject knowledge, with growing focus on their strengths and future pathways.",
+                  description: "As the new Grade 10 cohorts advance, learners continue building competencies and subject knowledge, with growing focus on their strengths and future pathways.",
                 },
                 {
                   form: "Grade 12",
-                  description: "Learners complete the Senior School phase and prepare for their next education, training, or career steps.",
+                  description: "At the final stage of the new pathway, learners prepare for their next education, training, or career steps.",
                 },
               ].map((item) => (
                 <div key={item.form} className="flex gap-5 p-5 rounded-lg border border-border bg-card hover:border-primary/20 transition-colors">

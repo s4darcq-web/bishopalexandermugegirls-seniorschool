@@ -151,8 +151,9 @@ export default function Home({ navigate }: Props) {
             </div>
             <div>
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
-                Our CBC Senior School programme for Grades 10–12 develops competencies, talents, and
-                career awareness, supported by strong subject departments and dedicated student guidance.
+                As the phased transition introduces CBC Senior School, the new Grade 10 intake will
+                progress to Grades 11 and 12. Subject departments and student guidance support learners
+                through both the established and emerging pathways.
               </p>
             </div>
           </div>
@@ -161,8 +162,8 @@ export default function Home({ navigate }: Props) {
             {[
               {
                 num: "—",
-                title: "CBC Senior School",
-                body: "A competency-based Grades 10–12 pathway that builds knowledge, practical skills, talents, and career awareness.",
+                title: "New Senior School Pathway",
+                body: "The emerging CBC/CBE pathway begins with the new Grade 10 intake and progresses to Grades 11 and 12.",
                 cta: "View Curriculum",
               },
               {
@@ -274,12 +275,13 @@ export default function Home({ navigate }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
-              <p className="font-sans text-xs tracking-[0.22em] uppercase text-white/70 mb-2">CBC Senior School · 2026 Transition</p>
+              <p className="font-sans text-xs tracking-[0.22em] uppercase text-white/70 mb-2">Phased CBC Senior School Transition</p>
               <h2 className="font-serif text-2xl lg:text-3xl font-semibold text-white">
                 Grade 10 Senior School Admissions
               </h2>
               <p className="font-sans text-base text-white/75 mt-2">
-                Contact the school for current Grade 10 placement guidance and admissions information.
+                The new Grade 10 intake enters the emerging pathway; current Forms 3 and 4 remain in
+                the outgoing 8-4-4 cohort. Contact the school for placement guidance.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">

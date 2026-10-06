@@ -34,8 +34,9 @@ export default function Admissions({ navigate }: Props) {
                 Join Our School Community
               </h1>
               <p className="font-sans text-lg text-white/65 leading-relaxed">
-                Grade 10 is the entry point to CBC Senior School. Contact the school for current
-                placement guidance and transfer information during the transition.
+                The new Grade 10 intake enters the emerging CBC Senior School pathway. Current
+                Form 3 and Form 4 learners remain in the outgoing 8-4-4 cohort. Contact the school
+                for current placement guidance and transfer information.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
@@ -66,10 +67,10 @@ export default function Admissions({ navigate }: Props) {
                 Grade 10 Senior School Entry and Student Transfer
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-8">
-                Senior School is being introduced through Grades 10–12 from 2026. Grade 10 learners
-                progress to Grade 11 and then Grade 12 as the transition continues. For current Grade
-                10 placement guidance, transfer information, requirements, and availability, contact
-                the school office directly.
+                The phased Senior School transition introduces the new Grade 10 pathway, which
+                progresses to Grades 11 and 12 as cohorts advance. Current Form 3 and Form 4 learners
+                continue under the outgoing 8-4-4 system and toward KCSE. For current Grade 10 placement
+                guidance, transfer information, requirements, and availability, contact the school office.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a

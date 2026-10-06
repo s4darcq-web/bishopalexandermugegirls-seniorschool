@@ -6,9 +6,9 @@ export const school = {
   motto: "Truth and excellence",
   tagline: "Cultivating Leaders. Shaping Futures.",
   about:
-    "Established in 1985, Bishop Alexander Muge Girls Senior School is a government-aided girls' boarding school in Kenya. Named in honour of the late Rt. Rev. Alexander Kipsang Muge, Bishop of Eldoret Diocese, the school continues its tradition of scholarship, discipline, leadership, and service as it transitions from the 8-4-4 secondary model to CBC Senior School.",
+    "Established in 1985 as a girls' secondary school, Bishop Alexander Muge Girls Senior School has served generations of learners under the 8-4-4 system. A government-aided boarding school, it is entering a new chapter as Kenya progressively introduces CBC Senior School, while carrying forward its traditions of scholarship, discipline, leadership, character, and service.",
   namedAfter:
-    "The school is named after the Rt. Rev. Alexander Kipsang Muge, the Anglican Bishop of Eldoret Diocese. Bishop Muge was a respected spiritual leader and community advocate who championed education, justice, and development in the Rift Valley region until his passing in 1990. His legacy of principled leadership, service, and dedication to community continues to inspire the school's values and its Senior School era.",
+    "The school is named after the Rt. Rev. Alexander Kipsang Muge, the Anglican Bishop of Eldoret Diocese. Bishop Muge was a respected spiritual leader and community advocate who championed education, justice, and development in the Rift Valley region until his passing in 1990. His legacy of principled leadership, service, and dedication to community continues to inspire the school's values.",
   location: {
     address: "Trans-Nzoia, Kenya",
     county: "Trans-Nzoia",
@@ -24,14 +24,16 @@ export const school = {
     postalAddress: "[PLACEHOLDER: P.O. Box, Town]",
   },
   established: "1985",
-  type: "Girls' Boarding School",
+  type: "Girls' Secondary School · Boarding",
   category: "Government-Aided",
-  transition: "8-4-4 Secondary → CBC Senior School",
-  curriculum: "Competency-Based Curriculum (CBC) / Competency-Based Education (CBE)",
-  levels: ["Grade 10", "Grade 11", "Grade 12"],
-  outgoingCohort: "Current Form 3 and Form 4 learners continue under the outgoing 8-4-4 cohort.",
+  transition: "Phased transition: 8-4-4 to CBC Senior School",
+  curriculum: "CBC/CBE in the emerging Senior School pathway",
+  seniorSchoolStructure:
+    "New Grade 10 intake, progressing to Grades 11 and 12",
+  outgoingCohort:
+    "Current Form 3 and Form 4 learners complete the outgoing 8-4-4 pathway and sit KCSE.",
   transitionProgression:
-    "From 2026, the new Grade 10 intake enters Senior School and progresses to Grade 11 and then Grade 12 as the transition continues.",
+    "From 2026, the new Grade 10 intake enters the emerging Senior School pathway and progresses to Grade 11 and then Grade 12 as cohorts advance.",
   examBody: "Kenya National Examinations Council (KNEC)",
   outgoingCertificate: "Kenya Certificate of Secondary Education (KCSE)",
 }
@@ -304,7 +306,7 @@ export const news = [
     date: "2025-02-01",
     category: "Admissions",
     summary:
-      "As the CBC Senior School transition begins, prospective Grade 10 learners and families should contact the school for current placement guidance, requirements, and availability.",
+      "As the phased CBC Senior School transition introduces the new Grade 10 pathway, prospective learners and families should contact the school for current placement guidance, requirements, and availability.",
     slug: "grade-10-senior-school-admission-2026",
     image: "/images/admissions.jpg",
   },
@@ -438,7 +440,12 @@ export const admissionFAQs = [
   {
     question: "How does Grade 10 Senior School placement work?",
     answer:
-      "Grade 10 entry is part of the CBC Senior School transition. Parents and learners should consult the Ministry of Education placement guidance and contact the school office for current admission steps.",
+      "Grade 10 entry is part of the phased CBC Senior School transition and the new pathway progresses through Grades 11 and 12. Parents and learners should consult Ministry of Education placement guidance and contact the school office for current admission steps.",
+  },
+  {
+    question: "What about current Form 3 and Form 4 learners?",
+    answer:
+      "Current Form 3 and Form 4 learners are part of the outgoing 8-4-4 cohort and continue toward KCSE under that pathway. The new Grade 10 intake is part of the emerging CBC Senior School structure.",
   },
   {
     question: "What documents are required upon admission?",

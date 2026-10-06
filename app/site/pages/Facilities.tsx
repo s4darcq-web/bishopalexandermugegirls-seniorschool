@@ -58,7 +58,7 @@ export default function Facilities({ navigate }: Props) {
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
                 We continually work to improve our facilities in line with the needs of our students
-                and the standards expected of a quality Kenyan Senior School.
+                and the school&apos;s long-standing commitment to a supportive learning environment.
               </p>
               <p className="font-sans text-sm text-muted-foreground italic">
                 Note: Facility listings reflect confirmed information. Official school confirmation

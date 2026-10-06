@@ -57,21 +57,14 @@ export default function About({ navigate }: Props) {
                 {school.about}
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                Established in 1985, the school has served generations of learners through the former
-                8-4-4 secondary system. Kenya is now transitioning to Competency-Based Curriculum (CBC)
-                and Competency-Based Education (CBE). This is a phased change, not an overnight
-                replacement of every cohort.
+                The transition is phased. Current Form 3 and Form 4 learners remain in the outgoing
+                8-4-4 cohort and continue toward KCSE. The new Grade 10 intake belongs to the emerging
+                CBC Senior School pathway, progressing to Grades 11 and 12 as cohorts advance.
               </p>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-5">
-                From 2026, Senior School is being implemented through Grades 10–12. The new Grade 10
-                intake progresses to Grade 11 and then Grade 12 as the transition continues. Current
-                Form 3 and Form 4 learners remain part of the outgoing 8-4-4 cohort; KCSE relates to
-                that outgoing pathway, not the new Senior School structure.
-              </p>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                Our traditions of rigorous learning, a structured boarding environment, and service
-                remain central as the school embraces a future-focused model that develops competencies,
-                talents, leadership, character, career awareness, and individual potential.
+                The school&apos;s foundation remains its history of secondary education, scholarship,
+                discipline, leadership, boarding education, character formation, and service. CBC
+                Senior School is the next chapter in that continuing story.
               </p>
             </div>
 
@@ -88,8 +81,8 @@ export default function About({ navigate }: Props) {
                   </p>
                   <p className="font-sans text-base text-muted-foreground leading-relaxed">
                     The school carries forward Bishop Muge&apos;s legacy of education, principled
-                    leadership, justice, service, and community development. Those enduring values guide
-                    our mission as we enter the CBC Senior School era.
+                    leadership, justice, service, and community development. Those enduring values
+                    continue to guide the school and its community.
                   </p>
                 </div>
               </div>
@@ -99,13 +92,13 @@ export default function About({ navigate }: Props) {
                 <dl className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
                   {[
                     { label: "Established", value: school.established },
-                    { label: "Current Identity", value: school.name },
-                    { label: "Type", value: school.type },
+                    { label: "Current Name", value: school.name },
+                    { label: "Educational Heritage", value: school.type },
                     { label: "Category", value: school.category },
                     { label: "Transition", value: school.transition },
-                    { label: "Structure", value: school.levels.join(" · ") },
-                    { label: "Curriculum", value: school.curriculum },
-                    { label: "Outgoing Cohort", value: "8-4-4 Forms 3–4; KCSE" },
+                    { label: "New Senior School Structure", value: school.seniorSchoolStructure },
+                    { label: "New Pathway Curriculum", value: school.curriculum },
+                    { label: "Outgoing Cohort", value: school.outgoingCohort },
                     { label: "Location", value: `${school.location.region}, Kenya` },
                   ].map(({ label, value }) => (
                     <div key={label}>
